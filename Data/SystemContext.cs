@@ -9,10 +9,8 @@ namespace Training_Management_System.Data
         public DbSet<Session> sessions { get; set; }
         public DbSet<User> users { get; set; }
         public DbSet<Grade> grades { get; set; }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            base.OnConfiguring(optionsBuilder.UseSqlServer("Data Source=.;Initial Catalog=TrainingManagement;Integrated Security=True;Trust Server Certificate=True"));
-        }
+        public SystemContext(DbContextOptions<SystemContext> options) : base(options) { }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new UserConfiguration());

@@ -1,4 +1,4 @@
-html {
+/*html {
   font-size: 14px;
 }
 
@@ -18,5 +18,24 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+  margin-bottom: 60px;*/
+}
+/* Custom styles can go here */
+body {
+    padding-top: 60px;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.validation-summary-errors ul {
+    padding-left: 0;
+    list-style: none;
+    color: #dc3545;
+}
+
+.field-validation-error {
+    color: #dc3545;
+    font-size: 0.875em;
 }
