@@ -1,0 +1,30 @@
+﻿@model Training_Management_System.ViewModels.GradeViewModel
+@{
+    ViewData["Title"] = "Add Grade";
+}
+<h2>Add Grade</h2>
+
+<form asp-action="Create" novalidate>
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="mb-3">
+        <label asp-for="Sessionid" class="form-label"></label>
+        <select asp-for="Sessionid" asp-items="Model.Sessions" class="form-select"></select>
+        <span asp-validation-for="Sessionid" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Traineeid" class="form-label"></label>
+        <select asp-for="Traineeid" asp-items="Model.Trainees" class="form-select"></select>
+        <span asp-validation-for="Traineeid" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Value" class="form-label"></label>
+        <input asp-for="Value" class="form-control" />
+        <span asp-validation-for="Value" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-success">Save</button>
+    <a asp-action="Index" class="btn btn-secondary">Back</a>
+</form>

@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Training_Management_System.Models.Grade>
+@{
+    ViewData["Title"] = "Grades";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Grades</h2>
+    <a asp-action="Create" class="btn btn-success">Add Grade</a>
+</div>
+
+<form method="get" class="row g-2 mb-3">
+    <div class="col-auto">
+        <input type="text" name="trainee" value="@Context.Request.Query["trainee"]"
+               class="form-control" placeholder="Search by Trainee name" />
+    </div>
+    <div class="col-auto">
+        @Html.DropDownList("sessionId", (SelectList)ViewBag.Sessions, "All Sessions", new { @class = "form-select" })
+    </div>
+    <div class="col-auto">
+        <button class="btn btn-primary" type="submit">Search</button>
+        <a class="btn btn-secondary" asp-action="Index">Reset</a>
+    </div>
+</form>
+
+<table class="table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Course</th>
+            <th>Session</th>
+            <th>Trainee</th>
+            <th>Value</th>
+            <th class="text-center">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var g in Model)
+        {
+            <tr>
+                <td>@g.session?.course?.Name</td>
+                <td>
+                    @g.session?.StartDate.ToString("yyyy-MM-dd") → @g.session?.EndDate.ToString("yyyy-MM-dd")
+                </td>
+                <td>@g.Trainee?.Name (@g.Trainee?.Email)</td>
+                <td>@g.Value</td>
+                <td class="text-center">
+                    <a class="btn btn-sm btn-info" asp-action="Details" asp-route-id="@g.id">Details</a>
+                    <a class="btn btn-sm btn-warning" asp-action="Edit" asp-route-id="@g.id">Edit</a>
+                    <a class="btn btn-sm btn-danger" asp-action="Delete" asp-route-id="@g.id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
