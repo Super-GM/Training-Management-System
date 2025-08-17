@@ -1,0 +1,38 @@
+## Visual Studio cache
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## Build results
+bin/
+obj/
+Debug/
+Release/
+x64/
+x86/
+
+## IIS Express
+applicationhost.config
+
+## Logs and temp
+*.log
+*.tmp
+*.tlog
+
+## NuGet
+packages/
+*.nupkg
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## Rider / Resharper / other IDEs
+.idea/
+*.DotSettings
+
+## Others
+*.swp
+*.bak
+*.dbmdl
