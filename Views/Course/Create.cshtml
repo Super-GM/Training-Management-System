@@ -1,0 +1,75 @@
+﻿@model Training_Management_System.ViewModels.CourseViewModel
+
+@{
+    ViewData["Title"] = "Create New Course";
+}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">
+                        <i class="fas fa-plus me-2"></i>Create New Course
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Create" id="courseForm" novalidate>
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger"
+                             style="@(ViewData.ModelState.IsValid ? "display:none;" : "")"></div>
+
+                        <!-- Course Name -->
+                        <div class="form-group mb-3">
+                            <label asp-for="Name" class="control-label"></label>
+                            <input asp-for="Name" class="form-control" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+
+                        <!-- Category -->
+                        <div class="form-group mb-3">
+                            <label asp-for="Category" class="control-label"></label>
+                            <select asp-for="Category" class="form-control"
+                                    asp-items="Html.GetEnumSelectList<Training_Management_System.Models.CourseCategory>()">
+                                <option value="">-- Select Category --</option>
+                            </select>
+                            <span asp-validation-for="Category" class="text-danger"></span>
+                        </div>
+
+                        <!-- Instructor -->
+                        <div class="form-group mb-3">
+                            <label asp-for="InstructorId" class="control-label"></label>
+                            <select asp-for="InstructorId" class="form-control" asp-items="Model.Instructors">
+                                <option value="">-- Select Instructor --</option>
+                            </select>
+                            <span asp-validation-for="InstructorId" class="text-danger"></span>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="form-group mt-4">
+                            <button type="submit" class="btn btn-primary me-2">
+                                <i class="fas fa-save me-1"></i>Create Course
+                            </button>
+                            <a asp-action="Index" class="btn btn-secondary">
+                                <i class="fas fa-arrow-left me-1"></i>Back to List
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        $(document).ready(function () {
+            // Remove red error border when typing
+            $('input, select').on('input change', function () {
+                $(this).removeClass('input-validation-error');
+            });
+        });
+    </script>
+}

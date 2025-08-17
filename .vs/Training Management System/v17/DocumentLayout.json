@@ -1,10 +1,46 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\tasks of iti\\C# TASKS FOR ME\\Training Management System\\",
+  "WorkspaceRootPath": "C:\\Users\\Hp\\Training-Management-System\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{75A0FFE4-BB7C-4595-9678-9BCFA874DFDE}|Training Management System.csproj|d:\\tasks of iti\\c# tasks for me\\training management system\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75A0FFE4-BB7C-4595-9678-9BCFA874DFDE}|Training Management System.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{75A0FFE4-BB7C-4595-9678-9BCFA874DFDE}|Training Management System.csproj|c:\\users\\hp\\training-management-system\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75A0FFE4-BB7C-4595-9678-9BCFA874DFDE}|Training Management System.csproj|solutionrelative:controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75A0FFE4-BB7C-4595-9678-9BCFA874DFDE}|Training Management System.csproj|c:\\users\\hp\\training-management-system\\views\\course\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{75A0FFE4-BB7C-4595-9678-9BCFA874DFDE}|Training Management System.csproj|solutionrelative:views\\course\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75A0FFE4-BB7C-4595-9678-9BCFA874DFDE}|Training Management System.csproj|c:\\users\\hp\\training-management-system\\repositories\\implementation\\courserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75A0FFE4-BB7C-4595-9678-9BCFA874DFDE}|Training Management System.csproj|solutionrelative:repositories\\implementation\\courserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75A0FFE4-BB7C-4595-9678-9BCFA874DFDE}|Training Management System.csproj|c:\\users\\hp\\training-management-system\\controllers\\sessioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75A0FFE4-BB7C-4595-9678-9BCFA874DFDE}|Training Management System.csproj|solutionrelative:controllers\\sessioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75A0FFE4-BB7C-4595-9678-9BCFA874DFDE}|Training Management System.csproj|c:\\users\\hp\\training-management-system\\repositories\\implementation\\sessionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75A0FFE4-BB7C-4595-9678-9BCFA874DFDE}|Training Management System.csproj|solutionrelative:repositories\\implementation\\sessionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75A0FFE4-BB7C-4595-9678-9BCFA874DFDE}|Training Management System.csproj|c:\\users\\hp\\training-management-system\\models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75A0FFE4-BB7C-4595-9678-9BCFA874DFDE}|Training Management System.csproj|solutionrelative:models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75A0FFE4-BB7C-4595-9678-9BCFA874DFDE}|Training Management System.csproj|c:\\users\\hp\\training-management-system\\views\\session\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{75A0FFE4-BB7C-4595-9678-9BCFA874DFDE}|Training Management System.csproj|solutionrelative:views\\session\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75A0FFE4-BB7C-4595-9678-9BCFA874DFDE}|Training Management System.csproj|c:\\users\\hp\\training-management-system\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{75A0FFE4-BB7C-4595-9678-9BCFA874DFDE}|Training Management System.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75A0FFE4-BB7C-4595-9678-9BCFA874DFDE}|Training Management System.csproj|c:\\users\\hp\\training-management-system\\views\\course\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{75A0FFE4-BB7C-4595-9678-9BCFA874DFDE}|Training Management System.csproj|solutionrelative:views\\course\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75A0FFE4-BB7C-4595-9678-9BCFA874DFDE}|Training Management System.csproj|c:\\users\\hp\\training-management-system\\migrations\\20250817054946_courseupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75A0FFE4-BB7C-4595-9678-9BCFA874DFDE}|Training Management System.csproj|solutionrelative:migrations\\20250817054946_courseupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +50,176 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 17,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{75504045-d02f-44e5-bf60-5f60df380e8b}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Course.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Training-Management-System\\Models\\Course.cs",
+              "RelativeDocumentMoniker": "Models\\Course.cs",
+              "ToolTip": "C:\\Users\\Hp\\Training-Management-System\\Models\\Course.cs",
+              "RelativeToolTip": "Models\\Course.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T08:39:06.411Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SessionRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Training-Management-System\\Repositories\\Implementation\\SessionRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Implementation\\SessionRepository.cs",
+              "ToolTip": "C:\\Users\\Hp\\Training-Management-System\\Repositories\\Implementation\\SessionRepository.cs",
+              "RelativeToolTip": "Repositories\\Implementation\\SessionRepository.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwCIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T08:37:05.995Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\Training-Management-System\\Views\\Session\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Session\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\Training-Management-System\\Views\\Session\\Index.cshtml",
+              "RelativeToolTip": "Views\\Session\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-17T08:29:55.089Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\Training-Management-System\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\Training-Management-System\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-17T08:16:12.41Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\Training-Management-System\\Views\\Course\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Course\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\Training-Management-System\\Views\\Course\\Create.cshtml",
+              "RelativeToolTip": "Views\\Course\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-17T08:15:58.343Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SessionController.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Training-Management-System\\Controllers\\SessionController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SessionController.cs",
+              "ToolTip": "C:\\Users\\Hp\\Training-Management-System\\Controllers\\SessionController.cs",
+              "RelativeToolTip": "Controllers\\SessionController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T08:05:22.91Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CourseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Training-Management-System\\Repositories\\Implementation\\CourseRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Implementation\\CourseRepository.cs",
+              "ToolTip": "C:\\Users\\Hp\\Training-Management-System\\Repositories\\Implementation\\CourseRepository.cs",
+              "RelativeToolTip": "Repositories\\Implementation\\CourseRepository.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAADwvyAAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T07:58:35.067Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\tasks of iti\\C# TASKS FOR ME\\Training Management System\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Models\\User.cs",
-              "ToolTip": "D:\\tasks of iti\\C# TASKS FOR ME\\Training Management System\\Models\\User.cs",
-              "RelativeToolTip": "Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Title": "CourseController.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Training-Management-System\\Controllers\\CourseController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CourseController.cs",
+              "ToolTip": "C:\\Users\\Hp\\Training-Management-System\\Controllers\\CourseController.cs",
+              "RelativeToolTip": "Controllers\\CourseController.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAwwCAAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-13T18:20:01.034Z",
+              "WhenOpened": "2025-08-17T07:56:22.52Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "20250817054946_CourseUpdate.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Training-Management-System\\Migrations\\20250817054946_CourseUpdate.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250817054946_CourseUpdate.cs",
+              "ToolTip": "C:\\Users\\Hp\\Training-Management-System\\Migrations\\20250817054946_CourseUpdate.cs",
+              "RelativeToolTip": "Migrations\\20250817054946_CourseUpdate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T07:23:30.676Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\Training-Management-System\\Views\\Course\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Course\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\Training-Management-System\\Views\\Course\\Index.cshtml",
+              "RelativeToolTip": "Views\\Course\\Index.cshtml",
+              "ViewState": "AgIAABQAAAAAAAAAAAAgwCgAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-17T07:18:59.759Z",
               "EditorCaption": ""
             }
           ]

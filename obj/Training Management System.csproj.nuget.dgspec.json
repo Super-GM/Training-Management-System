@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\tasks of iti\\C# TASKS FOR ME\\Training Management System\\Training Management System.csproj": {}
+    "C:\\Users\\Hp\\Training-Management-System\\Training Management System.csproj": {}
   },
   "projects": {
-    "D:\\tasks of iti\\C# TASKS FOR ME\\Training Management System\\Training Management System.csproj": {
+    "C:\\Users\\Hp\\Training-Management-System\\Training Management System.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\tasks of iti\\C# TASKS FOR ME\\Training Management System\\Training Management System.csproj",
+        "projectUniqueName": "C:\\Users\\Hp\\Training-Management-System\\Training Management System.csproj",
         "projectName": "Training Management System",
-        "projectPath": "D:\\tasks of iti\\C# TASKS FOR ME\\Training Management System\\Training Management System.csproj",
-        "packagesPath": "C:\\Users\\MO ADEL\\.nuget\\packages\\",
-        "outputPath": "D:\\tasks of iti\\C# TASKS FOR ME\\Training Management System\\obj\\",
+        "projectPath": "C:\\Users\\Hp\\Training-Management-System\\Training Management System.csproj",
+        "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Hp\\Training-Management-System\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\MO ADEL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -63,6 +64,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[9.0.8, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.7, )"
             }
           },
           "imports": [
@@ -84,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
