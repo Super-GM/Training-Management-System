@@ -17,6 +17,7 @@ namespace Training_Management_System
 
             builder.Services.AddScoped<SessionRepository>();
             builder.Services.AddScoped<CourseRepository>();
+            builder.Services.AddScoped<UserRepository>();
 
             var app = builder.Build();
 
