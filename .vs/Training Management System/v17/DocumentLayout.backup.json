@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\tasks of iti\\C# TASKS FOR ME\\Training Management System\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{75A0FFE4-BB7C-4595-9678-9BCFA874DFDE}|Training Management System.csproj|d:\\tasks of iti\\c# tasks for me\\training management system\\repositories\\implementation\\courserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75A0FFE4-BB7C-4595-9678-9BCFA874DFDE}|Training Management System.csproj|solutionrelative:repositories\\implementation\\courserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CourseRepository.cs",
+              "DocumentMoniker": "D:\\tasks of iti\\C# TASKS FOR ME\\Training Management System\\Repositories\\Implementation\\CourseRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Implementation\\CourseRepository.cs",
+              "ToolTip": "D:\\tasks of iti\\C# TASKS FOR ME\\Training Management System\\Repositories\\Implementation\\CourseRepository.cs",
+              "RelativeToolTip": "Repositories\\Implementation\\CourseRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T13:25:33.429Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,6 +1,7 @@
-﻿using Training_Management_System.Models;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using System.Reflection.Emit;
+using Training_Management_System.Models;
 namespace Training_Management_System.Configurations
 {
     public class CourseConfiguration : IEntityTypeConfiguration<Course>
@@ -18,7 +19,7 @@ namespace Training_Management_System.Configurations
                 .IsRequired();
 
             builder.HasIndex(c => c.Name)
-                .IsUnique();//to make the Name unique
+                .IsUnique();
 
             builder.HasMany(c => c.Sessions)
                 .WithOne(s => s.course)

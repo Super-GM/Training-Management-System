@@ -16,6 +16,7 @@ namespace Training_Management_System
              options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             builder.Services.AddScoped<SessionRepository>();
+            builder.Services.AddScoped<CourseRepository>();
 
             var app = builder.Build();
 

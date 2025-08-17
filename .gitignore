@@ -12,7 +12,7 @@ Debug/
 Release/
 x64/
 x86/
-
+/Migrations/
 ## IIS Express
 applicationhost.config
 

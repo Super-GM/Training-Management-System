@@ -113,6 +113,9 @@ namespace Training_Management_System.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
 
+                    b.Property<int?>("CourseViewModelId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("EndDate")
                         .HasColumnType("datetime2");
 
@@ -123,6 +126,8 @@ namespace Training_Management_System.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("id");
+
+                    b.HasIndex("CourseViewModelId");
 
                     b.HasIndex("courseid");
 
@@ -198,6 +203,32 @@ namespace Training_Management_System.Migrations
                         });
                 });
 
+            modelBuilder.Entity("Training_Management_System.ViewModels.CourseViewModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Category")
+                        .HasColumnType("int");
+
+                    b.Property<int>("InstructorId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("InstructorId");
+
+                    b.ToTable("CourseViewModel");
+                });
+
             modelBuilder.Entity("Training_Management_System.Models.Course", b =>
                 {
                     b.HasOne("Training_Management_System.Models.User", "instructor")
@@ -230,6 +261,10 @@ namespace Training_Management_System.Migrations
 
             modelBuilder.Entity("Training_Management_System.Models.Session", b =>
                 {
+                    b.HasOne("Training_Management_System.ViewModels.CourseViewModel", null)
+                        .WithMany("Sessions")
+                        .HasForeignKey("CourseViewModelId");
+
                     b.HasOne("Training_Management_System.Models.Course", "course")
                         .WithMany("Sessions")
                         .HasForeignKey("courseid")
@@ -237,6 +272,17 @@ namespace Training_Management_System.Migrations
                         .IsRequired();
 
                     b.Navigation("course");
+                });
+
+            modelBuilder.Entity("Training_Management_System.ViewModels.CourseViewModel", b =>
+                {
+                    b.HasOne("Training_Management_System.Models.User", "Instructor")
+                        .WithMany()
+                        .HasForeignKey("InstructorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Instructor");
                 });
 
             modelBuilder.Entity("Training_Management_System.Models.Course", b =>
@@ -254,6 +300,11 @@ namespace Training_Management_System.Migrations
                     b.Navigation("courses");
 
                     b.Navigation("grades");
+                });
+
+            modelBuilder.Entity("Training_Management_System.ViewModels.CourseViewModel", b =>
+                {
+                    b.Navigation("Sessions");
                 });
 #pragma warning restore 612, 618
         }
