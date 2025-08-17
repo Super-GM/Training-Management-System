@@ -6,6 +6,7 @@ using Training_Management_System.ViewModels;
 
 namespace Training_Management_System.Controllers
 {
+    [Route("Grades")]
     public class GradeController : Controller
     {
         private readonly GradeRepository _gradeRepo;
@@ -14,7 +15,7 @@ namespace Training_Management_System.Controllers
         {
             _gradeRepo = gradeRepo;
         }
-
+        [HttpGet("")]
         public IActionResult Index(string? trainee, int? sessionId)
         {
             var data = _gradeRepo.GetAll(trainee, sessionId);
@@ -31,7 +32,7 @@ namespace Training_Management_System.Controllers
             return View(grade);
         }
 
-        [HttpGet]
+        [HttpGet("Create")]
         public IActionResult Create()
         {
             var vm = new GradeViewModel
@@ -42,7 +43,7 @@ namespace Training_Management_System.Controllers
             return View(vm);
         }
 
-        [HttpPost]
+        [HttpPost("Create")]
         [ValidateAntiForgeryToken]
         public IActionResult Create(GradeViewModel vm)
         {
@@ -73,7 +74,7 @@ namespace Training_Management_System.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        [HttpGet]
+        [HttpGet("Edit/Id")]
         public IActionResult Edit(int id)
         {
             var grade = _gradeRepo.GetById(id);
@@ -91,7 +92,7 @@ namespace Training_Management_System.Controllers
             return View(vm);
         }
 
-        [HttpPost]
+        [HttpPost("Edit/Id")]
         [ValidateAntiForgeryToken]
         public IActionResult Edit(int id, GradeViewModel vm)
         {
@@ -125,7 +126,7 @@ namespace Training_Management_System.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        [HttpGet]
+        [HttpGet("Delete/Id")]
         public IActionResult Delete(int id)
         {
             var grade = _gradeRepo.GetById(id);
