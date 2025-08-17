@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using Training_Management_System.Models;
 using Training_Management_System.Repositories.Implementation;
 using Training_Management_System.ViewModels;
@@ -15,24 +16,33 @@ namespace Training_Management_System.Controllers
             _courseRepo = courseRepo;
         }
 
-        public IActionResult Index(string name, CourseCategory? category)
+        public async Task<IActionResult> Index(string name, CourseCategory? category)
         {
-            var courses = string.IsNullOrEmpty(name) && !category.HasValue
-                ? _courseRepo.GetAll()
-                : _courseRepo.Search(name, category);
+            var query = _courseRepo.GetAll().AsQueryable();
+
+            if (!string.IsNullOrEmpty(name))
+                query = query.Where(c => c.Name.Contains(name));
+
+            if (category.HasValue)
+                query = query.Where(c => c.Category == category);
+
+            var courses = query.ToList();
+
+            // جهز الكاتيجوريز للـ dropdown
+            ViewBag.Categories = Enum.GetValues(typeof(CourseCategory))
+                .Cast<CourseCategory>()
+                .Select(c => new SelectListItem
+                {
+                    Value = c.ToString(),
+                    Text = c.ToString(),
+                    Selected = category.HasValue && c == category.Value
+                }).ToList();
 
             ViewBag.Name = name;
-            ViewBag.Category = category;
-            ViewBag.Categories = Enum.GetValues(typeof(CourseCategory))
-                                     .Cast<CourseCategory>()
-                                     .Select(c => new SelectListItem
-                                     {
-                                         Value = c.ToString(),
-                                         Text = c.ToString(),
-                                         Selected = category.HasValue && c == category.Value
-                                     }).ToList();
+
             return View(courses);
         }
+
 
         [HttpGet]
         public IActionResult Create()
