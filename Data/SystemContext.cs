@@ -30,8 +30,8 @@ namespace Training_Management_System.Data
                 new Course { id=2,Name="Biochemistry",Category=CourseCategory.Chemistry,instructorid=3}
                 );
             modelBuilder.Entity<Session>().HasData(
-                new Session {id = 1, StartDate=new DateTime(2025,8,16),EndDate=new DateTime(2025,8,20),courseid=1 },
-                new Session { id=2 ,StartDate=new DateTime(2025,8,15),EndDate=new DateTime(2025,8,21),courseid=2}
+                new Session {id = 1, StartDate=new DateTime(2025,8,30),EndDate=new DateTime(2025,9,3),courseid=1 },
+                new Session { id=2 ,StartDate=new DateTime(2025,8,30),EndDate=new DateTime(2025,9,4),courseid=2}
                 );
             modelBuilder.Entity<Grade>().HasData(
                 new Grade { id =1,Sessionid=1,Traineeid=2,Value=90}

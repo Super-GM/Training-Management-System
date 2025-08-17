@@ -82,6 +82,7 @@ namespace Training_Management_System.Migrations
                         .HasColumnType("int");
 
                     b.Property<decimal>("Value")
+                        .HasPrecision(18, 2)
                         .HasColumnType("decimal(18,2)");
 
                     b.HasKey("id");
@@ -134,21 +135,23 @@ namespace Training_Management_System.Migrations
                     b.ToTable("Sessions", null, t =>
                         {
                             t.HasCheckConstraint("CK_Session_EndDate", "[EndDate] > [StartDate]");
+
+                            t.HasCheckConstraint("ck_Session_StartDate", "[StartDate] > GETDATE()");
                         });
 
                     b.HasData(
                         new
                         {
                             id = 1,
-                            EndDate = new DateTime(2025, 8, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            StartDate = new DateTime(2025, 8, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            EndDate = new DateTime(2025, 9, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            StartDate = new DateTime(2025, 8, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             courseid = 1
                         },
                         new
                         {
                             id = 2,
-                            EndDate = new DateTime(2025, 8, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            StartDate = new DateTime(2025, 8, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            EndDate = new DateTime(2025, 9, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            StartDate = new DateTime(2025, 8, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             courseid = 2
                         });
                 });

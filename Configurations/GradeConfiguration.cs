@@ -12,7 +12,7 @@ namespace Training_Management_System.Configurations
             builder.HasKey(s => s.id);
 
             builder.Property(s => s.Value)
-                .IsRequired();
+                .IsRequired().HasPrecision(18,2);
 
             builder.HasCheckConstraint("CK_Grade_Value", "[Value] BETWEEN 0 AND 100");
             //To Check the Value in the range or not after insert it into DB note"CK : mean Check Constraint take it like pk or fr"

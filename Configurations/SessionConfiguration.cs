@@ -18,6 +18,7 @@ namespace Training_Management_System.Configurations
                 .IsRequired();
 
             builder.HasCheckConstraint("CK_Session_EndDate", "[EndDate] > [StartDate]");
+            builder.HasCheckConstraint("ck_Session_StartDate", "[StartDate] > GETDATE()");
 
             builder.HasMany(s => s.grades)
                 .WithOne(s => s.session)
