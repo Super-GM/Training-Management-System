@@ -55,13 +55,26 @@ namespace Training_Management_System.Repositories.Implementation
 
         public void Delete(int id)
         {
-            var course = _context.courses.Find(id);
+            var course = _context.courses
+                .Include(c => c.Sessions)
+                .ThenInclude(s => s.grades) // if grades exist
+                .FirstOrDefault(c => c.id == id);
+
             if (course != null)
             {
+                // remove dependent children first
+                foreach (var session in course.Sessions)
+                {
+                    _context.grades.RemoveRange(session.grades);
+                }
+
+                _context.sessions.RemoveRange(course.Sessions);
                 _context.courses.Remove(course);
+
                 _context.SaveChanges();
             }
         }
+
 
         public IEnumerable<SelectListItem> GetAllInstructors()
         {

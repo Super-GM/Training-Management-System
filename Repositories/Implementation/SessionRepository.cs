@@ -48,13 +48,22 @@ namespace Training_Management_System.Repositories.Implementation
 
         public void Delete(int id)
         {
-            var session = _context.sessions.Find(id);
+            var session = _context.sessions
+                .Include(s => s.grades)
+                .FirstOrDefault(s => s.id == id);
+
             if (session != null)
             {
+                // Remove related grades first
+                _context.grades.RemoveRange(session.grades);
+
+                // Then remove the session
                 _context.sessions.Remove(session);
+
                 _context.SaveChanges();
             }
         }
+
 
 
         public IEnumerable<SelectListItem> GetAllCourses()

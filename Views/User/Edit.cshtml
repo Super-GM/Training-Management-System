@@ -1,55 +1,81 @@
-﻿@model User
+﻿@model Training_Management_System.Models.User
+
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Edit User";
 }
 
-<div class="card">
-    <div class="card-header bg-primary text-white">
-        <h4 class="mb-0">Create New User</h4>
-    </div>
-    <div class="card-body">
-        <form asp-action="Edit" method="post" class="needs-validation" novalidate>
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="id" />
-            <div class="row mb-3">
-                <div class="col-md-6">
-                    <label asp-for="Name" class="form-label"></label>
-                    <input asp-for="Name" class="form-control" placeholder="Enter Full name" />
-                    <span asp-validation-for="Name" class="text-danger"></span>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">
+                        <i class="fas fa-user-edit me-2"></i>Edit User
+                    </h4>
                 </div>
+                <div class="card-body">
+                    <form asp-action="Edit" id="userForm" novalidate>
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger"
+                             style="@(ViewData.ModelState.IsValid ? "display:none;" : "")"></div>
+                        <input type="hidden" asp-for="id" />
 
-                <div class="col-md-6">
-                    <label asp-for="Email" class="form-label"></label>
-                    <input asp-for="Email" class="form-control" placeholder="Enter email address" />
-                    <span asp-validation-for="Email" class="text-danger"></span>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label asp-for="Name" class="form-label"></label>
+                                    <input asp-for="Name" class="form-control" placeholder="Enter full name" />
+                                    <span asp-validation-for="Name" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label asp-for="Email" class="form-label"></label>
+                                    <input asp-for="Email" type="email" class="form-control" placeholder="Enter email address" />
+                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label asp-for="Role" class="form-label"></label>
+                                    <select asp-for="Role" class="form-select">
+                                        <option value="">-- Select Role --</option>
+                                        <option value="Admin">Admin</option>
+                                        <option value="Instructor">Instructor</option>
+                                        <option value="Trainee">Trainee</option>
+                                    </select>
+                                    <span asp-validation-for="Role" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group mt-4">
+                            <button type="submit" class="btn btn-primary me-2">
+                                <i class="fas fa-save me-1"></i>Save Changes
+                            </button>
+                            <a asp-action="Index" class="btn btn-secondary">
+                                <i class="fas fa-arrow-left me-1"></i>Back to List
+                            </a>
+                        </div>
+                    </form>
                 </div>
             </div>
-
-            <div class="row mb-3">
-                <div class="col-md-6">
-                    <label asp-for="Role" class="form-label"></label>
-                    <select asp-for="Role" class="form-select">
-                        <option value="">-- Select Role --</option>
-                        <option value="Admin">Admin</option>
-                        <option value="Trainee">Trainee</option>
-                        <option value="Instructor">Instructor</option>
-                    </select>
-                    <span asp-validation-for="Role" class="text-danger"></span>
-                </div>
-            </div>
-
-            <div class="d-flex justify-content-end gap-2">
-                <a asp-action="Index" class="btn btn-outline-secondary">
-                    <i class="bi bi-arrow-left"></i> Back to List
-                </a>
-                <button type="submit" class="btn btn-primary">
-                    <i class="bi bi-save"></i> Save Changes
-                </button>
-            </div>
-        </form>
+        </div>
     </div>
 </div>
 
 @section Scripts {
-    <partial name="_ValidationScriptsPartial" />
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        $(document).ready(function() {
+            // Clear validation styles when user starts typing
+            $('input, select').on('input change', function() {
+                $(this).removeClass('input-validation-error');
+            });
+        });
+    </script>
 }

@@ -1,4 +1,5 @@
-﻿using Training_Management_System.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using Training_Management_System.Data;
 using Training_Management_System.Models;
 
 namespace Training_Management_System.Repositories.Implementation
@@ -36,12 +37,33 @@ namespace Training_Management_System.Repositories.Implementation
 
         public void Delete(int id)
         {
-            var user = _context.users.Find(id);
+            var user = _context.users
+                .Include(u => u.courses)
+                    .ThenInclude(c => c.Sessions)
+                        .ThenInclude(s => s.grades)
+                .FirstOrDefault(u => u.id == id);
+
             if (user != null)
             {
+                foreach (var course in user.courses.ToList())
+                {
+                    foreach (var session in course.Sessions.ToList())
+                    {
+                        _context.grades.RemoveRange(session.grades);
+
+                        _context.sessions.Remove(session);
+                    }
+
+                    _context.courses.Remove(course);
+                }
+
                 _context.users.Remove(user);
+
                 _context.SaveChanges();
             }
         }
+
+
+
     }
 }

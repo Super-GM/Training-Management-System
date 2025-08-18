@@ -1,24 +1,51 @@
 ﻿@model Training_Management_System.Models.Grade
+
 @{
     ViewData["Title"] = "Grade Details";
 }
-<h2>Grade Details</h2>
 
-<dl class="row">
-    <dt class="col-sm-2">Course</dt>
-    <dd class="col-sm-10">@Model.session?.course?.Name</dd>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">
+                        <i class="fas fa-info-circle me-2"></i>Grade Details
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-3">Course</dt>
+                        <dd class="col-sm-9">@Model.session?.course?.Name</dd>
 
-    <dt class="col-sm-2">Session</dt>
-    <dd class="col-sm-10">
-        @Model.session?.StartDate.ToString("yyyy-MM-dd") → @Model.session?.EndDate.ToString("yyyy-MM-dd")
-    </dd>
+                        <dt class="col-sm-3">Session</dt>
+                        <dd class="col-sm-9">
+                            @Model.session?.StartDate.ToString("dd MMM yyyy") → @Model.session?.EndDate.ToString("dd MMM yyyy")
+                        </dd>
 
-    <dt class="col-sm-2">Trainee</dt>
-    <dd class="col-sm-10">@Model.Trainee?.Name (@Model.Trainee?.Email)</dd>
+                        <dt class="col-sm-3">Trainee</dt>
+                        <dd class="col-sm-9">
+                            @Model.Trainee?.Name <small class="text-muted">(@Model.Trainee?.Email)</small>
+                        </dd>
 
-    <dt class="col-sm-2">Value</dt>
-    <dd class="col-sm-10">@Model.Value</dd>
-</dl>
+                        <dt class="col-sm-3">Grade Value</dt>
+                        <dd class="col-sm-9">
+                            <span class="badge @(Model.Value >= 70 ? "bg-success" : Model.Value >= 50 ? "bg-warning" : "bg-danger") fs-6">
+                                @Model.Value
+                            </span>
+                        </dd>
+                    </dl>
 
-<a asp-action="Edit" asp-route-id="@Model.id" class="btn btn-warning">Edit</a>
-<a asp-action="Index" class="btn btn-secondary">Back</a>
+                    <div class="mt-4">
+                        <a asp-action="Edit" asp-route-id="@Model.id" class="btn btn-warning me-2">
+                            <i class="fas fa-edit me-1"></i>Edit
+                        </a>
+                        <a asp-action="Index" class="btn btn-secondary">
+                            <i class="fas fa-arrow-left me-1"></i>Back to List
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

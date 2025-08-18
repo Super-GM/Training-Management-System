@@ -87,24 +87,20 @@ namespace Training_Management_System.Controllers
             }
         }
 
-        [HttpGet]
-        public async Task<IActionResult> Delete(int Id)
+        public IActionResult Delete(int id)
         {
             try
             {
-                User UserThatClientWantToDelete = UserRepository.GetById(Id)!;
-                if (UserThatClientWantToDelete is null)
-                {
-                    return RedirectToAction(nameof(Index));
-                }
-                UserRepository.Delete(Id);
-                return RedirectToAction(nameof(Index));
+                UserRepository.Delete(id);
+                TempData["Success"] = "Session deleted successfully!";
             }
-            catch (Exception ex)
+            catch
             {
-                return View("Error");
+                TempData["Error"] = "Error deleting session!";
             }
+            return RedirectToAction(nameof(Index));
         }
+
 
     }
 }

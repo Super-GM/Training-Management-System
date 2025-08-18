@@ -126,21 +126,30 @@ namespace Training_Management_System.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        [HttpGet("Delete/Id")]
+        //[HttpGet("Delete/Id")]
+        //public IActionResult Delete(int id)
+        //{
+        //    var grade = _gradeRepo.GetById(id);
+        //    if (grade == null) return NotFound();
+        //    return View(grade);
+        //}
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Delete(int id)
         {
-            var grade = _gradeRepo.GetById(id);
-            if (grade == null) return NotFound();
-            return View(grade);
-        }
 
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public IActionResult DeleteConfirmed(int id)
-        {
-            _gradeRepo.Delete(id);
-            TempData["Success"] = "Grade deleted successfully!";
+            try
+            {
+                _gradeRepo.Delete(id);
+                TempData["Deleted"] = "Grade deleted successfully!";
+            }
+            catch
+            {
+                TempData["Error"] = "Error deleting grade!";
+            }
             return RedirectToAction(nameof(Index));
         }
+
     }
 }
