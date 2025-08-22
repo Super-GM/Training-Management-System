@@ -19,7 +19,6 @@ namespace Training_Management_System.Data
             modelBuilder.ApplyConfiguration(new CourseConfiguration());
             modelBuilder.ApplyConfiguration(new SessionConfiguration());
             modelBuilder.ApplyConfiguration(new GradeConfiguration());
-            modelBuilder.Ignore<SelectListItem>();
             modelBuilder.Entity<User>().HasData(
                 new User { id=1, Name="Mohamed Adel",Email="mohamed@gmail.com",Role="instructor"},
                 new User { id=2,Name="Moheb",Email="Moheb@gmail.com",Role="Trainer"},
@@ -37,6 +36,5 @@ namespace Training_Management_System.Data
                 new Grade { id =1,Sessionid=1,Traineeid=2,Value=90}
                 );
         }
-        public DbSet<Training_Management_System.ViewModels.CourseViewModel> CourseViewModel { get; set; } = default!;
     }
 }

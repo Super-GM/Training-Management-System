@@ -1,9 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\tasks of iti\\C# TASKS FOR ME\\Training Management System\\",
+  "WorkspaceRootPath": "C:\\Users\\Hp\\source\\GithubRepo\\Training-Management-System\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{75A0FFE4-BB7C-4595-9678-9BCFA874DFDE}|Training Management System.csproj|d:\\tasks of iti\\c# tasks for me\\training management system\\controllers\\gradecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{75A0FFE4-BB7C-4595-9678-9BCFA874DFDE}|Training Management System.csproj|c:\\users\\hp\\source\\githubrepo\\training-management-system\\data\\systemcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75A0FFE4-BB7C-4595-9678-9BCFA874DFDE}|Training Management System.csproj|solutionrelative:data\\systemcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75A0FFE4-BB7C-4595-9678-9BCFA874DFDE}|Training Management System.csproj|c:\\users\\hp\\source\\githubrepo\\training-management-system\\migrations\\20250820062441_finalmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75A0FFE4-BB7C-4595-9678-9BCFA874DFDE}|Training Management System.csproj|solutionrelative:migrations\\20250820062441_finalmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75A0FFE4-BB7C-4595-9678-9BCFA874DFDE}|Training Management System.csproj|c:\\users\\hp\\source\\githubrepo\\training-management-system\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{75A0FFE4-BB7C-4595-9678-9BCFA874DFDE}|Training Management System.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75A0FFE4-BB7C-4595-9678-9BCFA874DFDE}|Training Management System.csproj|c:\\users\\hp\\source\\githubrepo\\training-management-system\\controllers\\gradecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{75A0FFE4-BB7C-4595-9678-9BCFA874DFDE}|Training Management System.csproj|solutionrelative:controllers\\gradecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -14,20 +26,96 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 11,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{75504045-d02f-44e5-bf60-5f60df380e8b}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "20250820062441_FinalMigration.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\source\\GithubRepo\\Training-Management-System\\Migrations\\20250820062441_FinalMigration.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250820062441_FinalMigration.cs",
+              "ToolTip": "C:\\Users\\Hp\\source\\GithubRepo\\Training-Management-System\\Migrations\\20250820062441_FinalMigration.cs",
+              "RelativeToolTip": "Migrations\\20250820062441_FinalMigration.cs",
+              "ViewState": "AgIAAJgAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T06:24:41.614Z"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "SystemContext.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\source\\GithubRepo\\Training-Management-System\\Data\\SystemContext.cs",
+              "RelativeDocumentMoniker": "Data\\SystemContext.cs",
+              "ToolTip": "C:\\Users\\Hp\\source\\GithubRepo\\Training-Management-System\\Data\\SystemContext.cs",
+              "RelativeToolTip": "Data\\SystemContext.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAmwBQAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T06:24:06.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Hp\\source\\GithubRepo\\Training-Management-System\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Hp\\source\\GithubRepo\\Training-Management-System\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-20T06:16:58.728Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "GradeController.cs",
-              "DocumentMoniker": "D:\\tasks of iti\\C# TASKS FOR ME\\Training Management System\\Controllers\\GradeController.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\source\\GithubRepo\\Training-Management-System\\Controllers\\GradeController.cs",
               "RelativeDocumentMoniker": "Controllers\\GradeController.cs",
-              "ToolTip": "D:\\tasks of iti\\C# TASKS FOR ME\\Training Management System\\Controllers\\GradeController.cs",
+              "ToolTip": "C:\\Users\\Hp\\source\\GithubRepo\\Training-Management-System\\Controllers\\GradeController.cs",
               "RelativeToolTip": "Controllers\\GradeController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-17T19:46:01.821Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-17T19:46:01.821Z"
             }
           ]
         }

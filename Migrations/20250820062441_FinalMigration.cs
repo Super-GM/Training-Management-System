@@ -50,27 +50,6 @@ namespace Training_Management_System.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "CourseViewModel",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    Category = table.Column<int>(type: "int", nullable: false),
-                    InstructorId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_CourseViewModel", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_CourseViewModel_Users_InstructorId",
-                        column: x => x.InstructorId,
-                        principalTable: "Users",
-                        principalColumn: "id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Sessions",
                 columns: table => new
                 {
@@ -78,19 +57,13 @@ namespace Training_Management_System.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     StartDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     EndDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    courseid = table.Column<int>(type: "int", nullable: false),
-                    CourseViewModelId = table.Column<int>(type: "int", nullable: true)
+                    courseid = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Sessions", x => x.id);
                     table.CheckConstraint("CK_Session_EndDate", "[EndDate] > [StartDate]");
                     table.CheckConstraint("ck_Session_StartDate", "[StartDate] > GETDATE()");
-                    table.ForeignKey(
-                        name: "FK_Sessions_CourseViewModel_CourseViewModelId",
-                        column: x => x.CourseViewModelId,
-                        principalTable: "CourseViewModel",
-                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Sessions_Courses_courseid",
                         column: x => x.courseid,
@@ -148,11 +121,11 @@ namespace Training_Management_System.Migrations
 
             migrationBuilder.InsertData(
                 table: "Sessions",
-                columns: new[] { "id", "CourseViewModelId", "EndDate", "StartDate", "courseid" },
+                columns: new[] { "id", "EndDate", "StartDate", "courseid" },
                 values: new object[,]
                 {
-                    { 1, null, new DateTime(2025, 9, 3, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2025, 8, 30, 0, 0, 0, 0, DateTimeKind.Unspecified), 1 },
-                    { 2, null, new DateTime(2025, 9, 4, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2025, 8, 30, 0, 0, 0, 0, DateTimeKind.Unspecified), 2 }
+                    { 1, new DateTime(2025, 9, 3, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2025, 8, 30, 0, 0, 0, 0, DateTimeKind.Unspecified), 1 },
+                    { 2, new DateTime(2025, 9, 4, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2025, 8, 30, 0, 0, 0, 0, DateTimeKind.Unspecified), 2 }
                 });
 
             migrationBuilder.InsertData(
@@ -172,11 +145,6 @@ namespace Training_Management_System.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_CourseViewModel_InstructorId",
-                table: "CourseViewModel",
-                column: "InstructorId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Grades_Sessionid",
                 table: "Grades",
                 column: "Sessionid");
@@ -190,11 +158,6 @@ namespace Training_Management_System.Migrations
                 name: "IX_Sessions_courseid",
                 table: "Sessions",
                 column: "courseid");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Sessions_CourseViewModelId",
-                table: "Sessions",
-                column: "CourseViewModelId");
         }
 
         /// <inheritdoc />
@@ -205,9 +168,6 @@ namespace Training_Management_System.Migrations
 
             migrationBuilder.DropTable(
                 name: "Sessions");
-
-            migrationBuilder.DropTable(
-                name: "CourseViewModel");
 
             migrationBuilder.DropTable(
                 name: "Courses");
